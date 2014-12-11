@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>#KEY</key>
+	<string>Number of Keys</string>
+	<key>+LKS</key>
+	<string>Returns 3 bit value, where each bit represents one of the three lock bit regions.</string>
+	<key>AL!</key>
+	<string>ALS variables overriding</string>
+	<key>ALA0</key>
+	<string>ALS analog lux calculation information</string>
+	<key>ALA1</key>
+	<string>ALS analog lux calculation information</string>
+	<key>ALA2</key>
+	<string>ALS analog lux calculation information</string>
+	<key>ALA3</key>
+	<string>ALS analog lux calculation information</string>
+	<key>ALA4</key>
+	<string>ALS analog lux calculation information</string>
+	<key>ALA5</key>
+	<string>ALS analog lux calculation information</string>
+	<key>ALAT</key>
+	<string>analog lux calculation thresholds</string>
+	<key>ALI0</key>
+	<string>ALS Sensor 0 Info</string>
+	<key>ALI1</key>
+	<string>ALS Sensor 1 Info</string>
+	<key>ALRV</key>
+	<string>ALS/SIL version ID for the application program interface</string>
+	<key>ALSC</key>
+	<string>&quot;ALS Configuration (some fields of which are used by the SIL
+on both ALS and non-ALS systems) &quot;</string>
+	<key>ALSF</key>
+	<string>ALS Scale Factor for SIL in 1.15 fixed-point representation</string>
+	<key>ALSL</key>
+	<string>Average ALS Ambient Light Reading in Lux</string>
+	<key>ALT0</key>
+	<string>ALS Ambient Light Sensor Temperature for sensor 0 (deg C, FP16.0)</string>
+	<key>ALT1</key>
+	<string>ALS Ambient Light Sensor Temperature for sensor 1 (deg C, FP16.0)</string>
+	<key>ALTH</key>
+	<string>ALS Ambient Light Sensor Thermal Coefficient and baseline temperature</string>
+	<key>ALV0</key>
+	<string>Latest ambient light reading from sensor 0</string>
+	<key>ALV1</key>
+	<string>Latest ambient light reading from sensor 1</string>
+	<key>AUPO</key>
+	<string>&quot;Auto Power-on key.  If set to 1, system will be automatically
+powered on by SMC after next transition to S5/G3HOT. &quot;</string>
+	<key>BATP</key>
+	<string>System currently being powered by battery. Used by FW TDM. Needed on all platforms.</string>
+	<key>BNum</key>
+	<string>Maximum number of supported batteries. Architecturally visiable key used by EFIUtil. Needed on all platforms.</string>
+	<key>BSIn</key>
+	<string>Battery System info byte.</string>
+	<key>CLKT</key>
+	<string>&quot;SMC local time in seconds since midnight
+Used to control SIL brightness on some systems based on time of day. &quot;</string>
+	<key>CRCB</key>
+	<string>Returns a CRC32 value representing all of UserBootMAT.</string>
+	<key>CRCU</key>
+	<string>Generates a CRC32 value representing all of UserMAT.</string>
+	<key>DPLM</key>
+	<string>Tests Plimit plumbing from SMC to OS. 3 bytes input are Cpu Plimit, Gpu Plimit, Mem Plimit.</string>
+	<key>EPCA</key>
+	<string>EPM CV Start Address</string>
+	<key>EPCF</key>
+	<string>EPM CV Flash Status 1=flashed</string>
+	<key>EPCI</key>
+	<string>EPM CV Configuration ID</string>
+	<key>EPCV</key>
+	<string>EPM CV Configuration Version</string>
+	<key>EPMA</key>
+	<string>EPM Meta Table Address First set EPMI and then read EPMA</string>
+	<key>EPMI</key>
+	<string>EPM Meta Table Index First set EPMI and then read EPMA</string>
+	<key>EPUA</key>
+	<string>EPM UV Start Address</string>
+	<key>EPUF</key>
+	<string>EPM UV Flash Status. 1=flashed</string>
+	<key>EPUI</key>
+	<string>EPM UV Configuration ID</string>
+	<key>EPUV</key>
+	<string>EPM UV Configuration Version</string>
+	<key>EVCT</key>
+	<string>Event Trace Buffer</string>
+	<key>EVMD</key>
+	<string>Event Mode. Used for debug to determine if we should reset SMC or jump into flasher on a detected SMC health check</string>
+	<key>EVRD</key>
+	<string>Event Trace Buffer Read</string>
+	<key>F0Ac</key>
+	<string>Fan0 Actual RPM, DIAG_LOG</string>
+	<key>F0ID</key>
+	<string>Fan0 Description</string>
+	<key>F0Mn</key>
+	<string>Fan0 Minimum RPM</string>
+	<key>F0Mt</key>
+	<string>Fan0 Max calculated target RPM</string>
+	<key>F0Mx</key>
+	<string>Fan0 Maximum RPM</string>
+	<key>F0Sf</key>
+	<string>Fan0 Safe RPM</string>
+	<key>F0Tg</key>
+	<string>Modify this in conjunction with Fan force bit [0] to set fan speed.</string>
+	<key>F1Ac</key>
+	<string>Fan1 Actual RPM</string>
+	<key>F1ID</key>
+	<string>Fan1 Description</string>
+	<key>F1Mn</key>
+	<string>Fan1 Minimum RPM</string>
+	<key>F1Mt</key>
+	<string>Fan1 Max calculated target RPM</string>
+	<key>F1Mx</key>
+	<string>Fan1 Maximum RPM</string>
+	<key>F1Sf</key>
+	<string>Fan1 Safe RPM</string>
+	<key>F1Tg</key>
+	<string>Modify this in conjunction with Fan force bit [1] to set fan speed.</string>
+	<key>F2Ac</key>
+	<string>Fan2 Actual RPM</string>
+	<key>F2ID</key>
+	<string>Fan2 Description</string>
+	<key>F2Mn</key>
+	<string>Fan2 Minimum RPM</string>
+	<key>F2Mt</key>
+	<string>Fan2 Max calculated target RPM</string>
+	<key>F2Mx</key>
+	<string>Fan2 Maximum RPM</string>
+	<key>F2Sf</key>
+	<string>Fan2 Safe RPM</string>
+	<key>F2Tg</key>
+	<string>Modify this in conjunction with Fan force bit [2] to set fan speed.</string>
+	<key>FNum</key>
+	<string>Number of supported fans.</string>
+	<key>FPhz</key>
+	<string>&quot;Programmable Fan Phase offset affects all fans.  Signed value
+has legal values between 0 and 360.  Default is 360 (no change). &quot;</string>
+	<key>FS!</key>
+	<string>Fan force bits. FS![15:0] Setting bit to 1 allows for external control over fan speed target and prevents thermal manager from actively overidding value set via key access.</string>
+	<key>GCID</key>
+	<string>Graphics Card Identification</string>
+	<key>GPU!</key>
+	<string>&quot;MXM GPU Force bits[7:0]: GPU![0] = GTHR force override
+bit. &quot;</string>
+	<key>GTHR</key>
+	<string>&quot;MXM_GPU_AC_BATT_L. Drive SMC output with written value.
+Needs to be written in conjunction with GPU![0].  &quot;</string>
+	<key>HBWK</key>
+	<string>&quot;Allows a one-time lid-open event to &quot;&quot;wake&quot;&quot; the system from S5.&quot;</string>
+	<key>HDBS</key>
+	<string>Hang Detect. A/B switch value</string>
+	<key>HDST</key>
+	<string>Hang Detect. Current System State Machine value</string>
+	<key>HDSW</key>
+	<string>Hang Detect. {Sleep[15:0]|Wake[15:0]} Count.</string>
+	<key>IC0C</key>
+	<string>CPU 0 core current.</string>
+	<key>ID0R</key>
+	<string>DC In S0 rail current.</string>
+	<key>ID5R</key>
+	<string>DC In S5 rail current.</string>
+	<key>IG0R</key>
+	<string>GPU 0 rail current.</string>
+	<key>IG0r</key>
+	<string>GPU 0 rail current. Raw ADC input value.</string>
+	<key>LAcN</key>
+	<string>Queue up ACPI Notify byte</string>
+	<key>LAtN</key>
+	<string>Queue up Proprietary ATTN_IF Notify byte</string>
+	<key>LCCN</key>
+	<string>LPC Debug counter data: Num of Acpi Notifies</string>
+	<key>LCCQ</key>
+	<string>LPC Debug counter data: Num of Acpi Queries</string>
+	<key>LCKA</key>
+	<string>LPC Debug counter data: Num of Key Accesses</string>
+	<key>LCSA</key>
+	<string>LPC Debug counter data: Num of Smb Accesses</string>
+	<key>LCTN</key>
+	<string>LPC Debug counter data: Num of Attn Notifies</string>
+	<key>LCTQ</key>
+	<string>LPC Debug counter data: Num of Attn Queries</string>
+	<key>LDSP</key>
+	<string>When OS X sleeps due to a lid-closed event, it writes a 1 in this key.</string>
+	<key>LS!</key>
+	<string>SIL variables overriding.</string>
+	<key>LSCF</key>
+	<string>LmsConfig structure provides overall system-specific config info for the SIL.</string>
+	<key>LSDD</key>
+	<string>LmsDwell structures provide dwell fade-down configuration</string>
+	<key>LSDU</key>
+	<string>LmsDwell structures provide dwell fade-up configuration</string>
+	<key>LSFD</key>
+	<string>LmsFlare structures provide flare config for non-breathing fade-down</string>
+	<key>LSFU</key>
+	<string>LmsFlare structures provide flare config for non-breathing fade-up</string>
+	<key>LSLB</key>
+	<string>&quot;SIL&apos;s PWM &quot;&quot;Full On&quot;&quot; value (usually 0xFFFF, used for power switch override)&quot;</string>
+	<key>LSLF</key>
+	<string>&quot;SIL&apos;s PWM &quot;&quot;Off&quot;&quot; value (usually 0)&quot;</string>
+	<key>LSLN</key>
+	<string>&quot;SIL&apos;s PWM &quot;&quot;On&quot;&quot; value (varies per system)&quot;</string>
+	<key>LSOF</key>
+	<string>Reads TRUE (1) if the SIL is Off</string>
+	<key>LSOO</key>
+	<string>&quot;ui8LmsSetOnOff is a function called by the OS to set
+the SIL to either on (max brightness, flag=1) or off (flag = 0). &quot;</string>
+	<key>LSPV</key>
+	<string>SIL&apos;s Current PWM value</string>
+	<key>LSRB</key>
+	<string>&quot;ui8LmsRevertToSSMBehavior is a function called by the OS to revert the
+SIL&apos;s behavior to the most recent behavior requested by the SMC&apos;s system
+state machine. &quot;</string>
+	<key>LSSB</key>
+	<string>&quot;ui8LmsSetBehavior is a function called by the OS to override the SIL&apos;s
+behavior.  The calling parameters must conform to the
+LmsOverrideBehavior struct. &quot;</string>
+	<key>LSSE</key>
+	<string>&quot;gfLmsMaxBrightScalingEnabled lets diagnotics enable and
+disable the SIL&apos;s per-unit max brightness scaling.  This flag will
+normally be 1 (i.e, TRUE), which enables per-unit scaling.  Set this
+flag to 0 (FALSE) to disable per-unit scaling.  &quot;</string>
+	<key>LSSS</key>
+	<string>&quot;ui8LmsSetSSMBehavior is a function called by the OS to
+override the SIL&apos;s behavior while pretending to be the SMC&apos;s System
+State Machine (host software should normally use LSSB instead of this
+special-purpose key).  The calling parameters must conform to the
+LmsOverrideBehavior struct. &quot;</string>
+	<key>LSSV</key>
+	<string>SIL&apos;s per-unit max brightness scale value.  A value of 0xFFFF indicates that no scaling will be done for this particular unit.</string>
+	<key>LSUP</key>
+	<string>&quot;ui8LmsUpdateBehaviorParams is a function called by the SIL tuning
+application to force an update of the SIL&apos;s behavior parameters at the
+user&apos;s implicit request (i.e., after the user updates underlying data
+that affects the behavior params). &quot;</string>
+	<key>MACA</key>
+	<string>Memory Address Cycle Address. Sets the address for subsequent MACR calls</string>
+	<key>MACM</key>
+	<string>Memory Address Cycle Mode. Sets the addressing mode for MACR calls. Defaults to auto-incrementing</string>
+	<key>MACR</key>
+	<string>&quot;Memory Address Cycle Read. Reads 32 bytes from SMC @ address pointed to by MACA. Restricted to EPM address range. If
+MACM==1 then MACA will be incremented by 32 bytes at the completion of the read. &quot;</string>
+	<key>MOCF</key>
+	<string>MOtion sensor (SMS) Configuration register</string>
+	<key>MOCN</key>
+	<string>MOtion sensor (SMS) Control register - enables accelerometer and threshold testing</string>
+	<key>MSAL</key>
+	<string>Allows control of the thermal routine&apos;s behavior for debug and testing purposes.</string>
+	<key>MSAc</key>
+	<string>Returns the average CPU PLIMIT sent by the SMC, DIAG_LOG</string>
+	<key>MSAg</key>
+	<string>Returns the average GPU PLIMIT sent by the SMC, DIAG_LOG</string>
+	<key>MSAm</key>
+	<string>Returns the average MEM PLIMIT sent by the SMC, DIAG_LOG</string>
+	<key>MSC0</key>
+	<string>Calibration key</string>
+	<key>MSC1</key>
+	<string>Calibration key</string>
+	<key>MSC2</key>
+	<string>Calibration key</string>
+	<key>MSC3</key>
+	<string>Calibration key</string>
+	<key>MSCP</key>
+	<string>Total number of sub samples to calibrate with</string>
+	<key>MSCR</key>
+	<string>Total number of sub samples to calibrate with</string>
+	<key>MSCS</key>
+	<string>Calibration Start key - Writing a value of 0x11 to this key will begin</string>
+	<key>MSCT</key>
+	<string>Total number of samples to calibrate with</string>
+	<key>MSCa</key>
+	<string>Calibration key</string>
+	<key>MSCb</key>
+	<string>Calibration key</string>
+	<key>MSCc</key>
+	<string>Calibration key</string>
+	<key>MSCd</key>
+	<string>Calibration key</string>
+	<key>MSCl</key>
+	<string>Calibration key</string>
+	<key>MSCm</key>
+	<string>Calibration key</string>
+	<key>MSCn</key>
+	<string>Calibration key</string>
+	<key>MSCo</key>
+	<string>Calibration key</string>
+	<key>MSDI</key>
+	<string>&quot;Indicates whether an optical disk has been inserted in the
+optical disk drive (1) or the drive is empty (0).  &quot;</string>
+	<key>MSDW</key>
+	<string>&quot;ui8SSMDisplayWakeSleep is a function called by the OS to notify the SMC
+that the display is now awake (i.e., on) or asleep (i.e. off), so that
+the SMC can set the correct behavior for the Status Indicator Light.  &quot;</string>
+	<key>MSHA</key>
+	<string>Average HDD activity (range 0 to 1) in U7.9 format.</string>
+	<key>MSLD</key>
+	<string>Returns the current Lid Switch state</string>
+	<key>MSPA</key>
+	<string>Average count of prochot assertions between 0 and 1 in 6.10 format, DIAG_LOG.</string>
+	<key>MSPC</key>
+	<string>&quot;reads and writes the number of available &quot;&quot;Power states&quot;&quot; for the CPU.&quot;</string>
+	<key>MSPS</key>
+	<string>&quot;Returns the current (enumerated) system power state exported by the
+SMC&apos;s System State Machine.  &quot;</string>
+	<key>MSSD</key>
+	<string>Stores the last known Shut-down cause</string>
+	<key>MSSF</key>
+	<string>&quot;Bad fan flag bits. A bit-vector in which each bit position represents a corresponding fan status. The
+bit-vector is write-one-to-clear for each fan/bit position &quot;</string>
+	<key>MSSP</key>
+	<string>Stores the last known Sleep Request cause. See MSSD for list of causes.</string>
+	<key>MSSS</key>
+	<string>Returns the current (enumerated) state of the SMC&apos;s System State Machine</string>
+	<key>MSTC</key>
+	<string>- ScratchPad register that outputs via Tlog so that a script running on the SUT can add to the log what test case was running.</string>
+	<key>MSTM</key>
+	<string>Returns whether power balancing is enabled or not.</string>
+	<key>MSTc</key>
+	<string>Returns the last CPU PLIMIT sent by the SMC</string>
+	<key>MSTg</key>
+	<string>Returns the last GPU PLIMIT sent by the SMC</string>
+	<key>MSTm</key>
+	<string>Returns the last MEM PLIMIT sent by the SMC</string>
+	<key>MSWR</key>
+	<string>&quot;ui8SSMStartWarmReset is a function called by the OS to notify that SMC
+that a warm reset is beginning. &quot;</string>
+	<key>NATJ</key>
+	<string>&quot;Ninja Action Timer Job.  This job is performed when the Ninja Action Timer
+counts down to zero.&quot;</string>
+	<key>NATi</key>
+	<string>Ninja Action Timer.  This timer can be set to the number of seconds before a job (defined in NATJ) is performed</string>
+	<key>NTOK</key>
+	<string>Key for OS X to write to turn on Proprietary Host Notifies.</string>
+	<key>ONMI</key>
+	<string>NMI flag (For OS NMI)</string>
+	<key>PC0C</key>
+	<string>CPU 0 core power</string>
+	<key>PC0c</key>
+	<string>CPU 0 core power. Raw ADC input value.</string>
+	<key>PD0R</key>
+	<string>DC-In MLB S0 rail power</string>
+	<key>PD5R</key>
+	<string>DC-In MLB S5 rail power</string>
+	<key>PDMR</key>
+	<string>DC-In MLB Total (S0+S5) power</string>
+	<key>PDTR</key>
+	<string>DC-In System Total (S0+S5+LCD+HDD) power</string>
+	<key>PG0R</key>
+	<string>GPU0 rail power</string>
+	<key>PZ0E</key>
+	<string>Zone0 average target power (PC0C+PG0R)</string>
+	<key>PZ0G</key>
+	<string>Zone0 average power (PC0C+PG0R)</string>
+	<key>RBr</key>
+	<string>Source branch</string>
+	<key>REV</key>
+	<string>Source revision</string>
+	<key>RMde</key>
+	<string>Mode. What code is currently being executed. &apos;B&apos;=base flasher, &apos;U&apos;=update flasher or &apos;A&apos;=app code</string>
+	<key>RPlt</key>
+	<string>Platform String</string>
+	<key>RSvn</key>
+	<string>SVN database revision</string>
+	<key>RVBF</key>
+	<string>Base flasher revision</string>
+	<key>RVUF</key>
+	<string>Update flasher revision</string>
+	<key>SAS!</key>
+	<string>&quot;ADC sensor force bits [31:0]. Setting bit(s) will prevent periodic ADC conversion cycle from overwriting
+sensor data for selected channels. &quot;</string>
+	<key>SBF</key>
+	<string>Bad sensor flags.</string>
+	<key>SBFE</key>
+	<string>&quot;The state of this flag determines whether vTmBadSensorCheck
+will display sensor error codes instead of actual temperatures when it
+detects unstable temperatures or temperatures that are below the allowed
+minimum.  Defaults to TRUE (displays error codes).&quot;</string>
+	<key>SCIA</key>
+	<string>Lpc Base Address for SCIF, default is 0x3F8</string>
+	<key>SCIL</key>
+	<string>Set this to 1 to enable SCIF to be LPC slave for EFI debug</string>
+	<key>SCTg</key>
+	<string>CPU Thermal Target Temp</string>
+	<key>SDPE</key>
+	<string>Mode bit to enable polling of developmental build sensors. Default state will vary depending on build.</string>
+	<key>SDRd</key>
+	<string>Delayed sensor read. Writing a value in ms will cause the SMC to start a timer which when expires will cause the SMC to set force bits for polled sensors</string>
+	<key>SGHT</key>
+	<string>Sensor Graphics HoT. 1 = GPU Overtemp.</string>
+	<key>SGTT</key>
+	<string>GPU Heatsink Throttle Threshold Temperature</string>
+	<key>SGTg</key>
+	<string>GPU Thermal Target Temp</string>
+	<key>SHTg</key>
+	<string>HDD Thermal Target Temp</string>
+	<key>SIS!</key>
+	<string>&quot;I2C sensor force bits. Setting bit(s) will prevent periodic
+I2C polling cycle overwriting sensor data. This key is intended for
+expert use only&quot;</string>
+	<key>SLPT</key>
+	<string>LCD Prochot threshold. TL0P temp at which Prochot will be asserted.</string>
+	<key>SLST</key>
+	<string>LCD Sleep threshold. TL0P temp at which Sleep will be requested.</string>
+	<key>SLTg</key>
+	<string>LCD Fan Temp Target</string>
+	<key>SLTp</key>
+	<string>LCD Power Temp Target</string>
+	<key>SOTg</key>
+	<string>ODD Thermal Target Temp</string>
+	<key>SPH0</key>
+	<string>CPU Prochot event count since last boot</string>
+	<key>SPHR</key>
+	<string>Any bit set to 1 identifies an active Prochot requestor.</string>
+	<key>SPHS</key>
+	<string>Indicates if PROCHOT was ever set after entering S0, DIAG_LOG</string>
+	<key>SPHT</key>
+	<string>&quot;Current state of all Prochots and whether the SMC itself is
+    asserting each one.&quot;</string>
+	<key>SPHZ</key>
+	<string>Drive SMC Prochot(s).</string>
+	<key>SPS!</key>
+	<string>Power force bits. Setting bit(s) will prevent periodic power calculations from overwriting existing data</string>
+	<key>SpCP</key>
+	<string>Read-only PS I-squared sum Prochot threshold in U27.4 format</string>
+	<key>SpCS</key>
+	<string>Read-only PS I-squared sum target for P3-level PS current control, in U27.4 format</string>
+	<key>SpCT</key>
+	<string>Read-only PS I-squared target (non-summed) for initializing PS current control filter history, in U12.4 format</string>
+	<key>SpPT</key>
+	<string>PS Prochot threshold. Tp0P temp at which Prochot will be asserted</string>
+	<key>SpST</key>
+	<string>PS Sleep threshold. Tp0P temp at which Sleep will be requested.</string>
+	<key>SpTg</key>
+	<string>PS Fan Temp Target</string>
+	<key>TA0P</key>
+	<string>Ambient temp</string>
+	<key>TC0D</key>
+	<string>CPU 0 die temp</string>
+	<key>TC0H</key>
+	<string>CPU 0 Heatsink temp</string>
+	<key>TC0P</key>
+	<string>CPU 0 Proximity temp</string>
+	<key>TG0D</key>
+	<string>GPU 0 die temp</string>
+	<key>TG0H</key>
+	<string>GPU 0 Heatsink temp</string>
+	<key>TG0P</key>
+	<string>GPU 0 Proximity temp</string>
+	<key>TH0P</key>
+	<string>HardDisk proximity temp</string>
+	<key>TL0P</key>
+	<string>LCD proximity temp</string>
+	<key>TO0P</key>
+	<string>Optical Drive proximity temp</string>
+	<key>TW0P</key>
+	<string>Airport temp</string>
+	<key>Tm0P</key>
+	<string>Misc Local temp</string>
+	<key>Tp0P</key>
+	<string>Power Supply Proximity temp</string>
+	<key>UPRC</key>
+	<string>Type of SMC microcontroller upon which system is based (value of UPROC macro)</string>
+	<key>VC0C</key>
+	<string>CPU 0 core voltage.</string>
+	<key>VC0c</key>
+	<string>CPU 0 core voltage. Raw ADC input value.</string>
+	<key>VD0R</key>
+	<string>DC In S0 rail voltage.</string>
+	<key>VD5R</key>
+	<string>DC In S5 rail voltage.</string>
+	<key>VG0R</key>
+	<string>GPU 0 rail voltage.</string>
+	<key>VG0r</key>
+	<string>GPU 0 rail voltage. Raw ADC input value.</string>
+	<key>dBA0</key>
+	<string>Acoustic Reporting. Fan 0 Noise Component (dBA).</string>
+	<key>dBA1</key>
+	<string>Acoustic Reporting. Fan 1 Noise Component (dBA).</string>
+	<key>dBA2</key>
+	<string>Acoustic Reporting. Fan 2 Noise Component (dBA).</string>
+	<key>dBAH</key>
+	<string>Acoustic Reporting. HDD Noise Component (dBDA).</string>
+	<key>dBAT</key>
+	<string>Acoustic Reporting. Total Noise of all calculated components (dBDA).</string>
+	<key>zDBG</key>
+	<string>Set this to 1 to enable SCIF debug output to USB 0 Port</string>
+</dict>
+</plist>
