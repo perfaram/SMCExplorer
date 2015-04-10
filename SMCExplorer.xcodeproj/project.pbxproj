@@ -12,8 +12,8 @@
 		0B20F3FE19ED4DC400E46A9A /* DCOAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B20F3FC19ED4DC400E46A9A /* DCOAboutWindowController.m */; };
 		0B6114A619ED629900F7DB5C /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0B6114A519ED629900F7DB5C /* AppIcon.icns */; };
 		0B66AD171A36ED31009E40D7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECF599F15384B8000250671 /* Cocoa.framework */; };
-		0B9BC3751A188E2B00A6AB38 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9BC3741A188E2B00A6AB38 /* IOKit.framework */; };
-		0BAEE1E619F7F6F800D6DB7F /* smc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAEE1E519F7F6F800D6DB7F /* smc.m */; };
+		0B83081B1AD84E6C0001B4C3 /* smc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAEE1E519F7F6F800D6DB7F /* smc.m */; };
+		0B83081E1AD84EF60001B4C3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B83081D1AD84EF60001B4C3 /* IOKit.framework */; };
 		0BBAD1011A07E2A800AB1FC2 /* SMCDescs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BBAD1001A07E2A800AB1FC2 /* SMCDescs.plist */; };
 		0BBAD1041A07E3BC00AB1FC2 /* SMCSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBAD1031A07E3BC00AB1FC2 /* SMCSupport.m */; };
 		6ECF59AA15384B8000250671 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF59A815384B8000250671 /* InfoPlist.strings */; };
@@ -29,11 +29,7 @@
 		0B20F3FB19ED4DC400E46A9A /* DCOAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DCOAboutWindow.xib; path = DCOAboutWindow/DCOAboutWindow.xib; sourceTree = "<group>"; };
 		0B20F3FC19ED4DC400E46A9A /* DCOAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCOAboutWindowController.m; path = DCOAboutWindow/DCOAboutWindowController.m; sourceTree = "<group>"; };
 		0B6114A519ED629900F7DB5C /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
-		0B66AD181A36F24D009E40D7 /* smc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = smc.h; path = SMCWrapper/smc.h; sourceTree = "<group>"; };
-		0B66AD191A36F24D009E40D7 /* SMCWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCWrapper.h; path = SMCWrapper/SMCWrapper.h; sourceTree = "<group>"; };
-		0B66AD1A1A36F24D009E40D7 /* SMCWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCWrapper.m; path = SMCWrapper/SMCWrapper.m; sourceTree = "<group>"; };
-		0B71A2571A29B04E00BB1CDC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0B9BC3741A188E2B00A6AB38 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = ../../../../System/Library/Frameworks/IOKit.framework; sourceTree = "<group>"; };
+		0B83081D1AD84EF60001B4C3 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		0BAEE1E419F7F6F800D6DB7F /* smc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
 		0BAEE1E519F7F6F800D6DB7F /* smc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smc.m; sourceTree = "<group>"; };
 		0BBAD1001A07E2A800AB1FC2 /* SMCDescs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SMCDescs.plist; sourceTree = "<group>"; };
@@ -58,9 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B83081E1AD84EF60001B4C3 /* IOKit.framework in Frameworks */,
 				0B66AD171A36ED31009E40D7 /* Cocoa.framework in Frameworks */,
 				0B20F3F919ED46E500E46A9A /* QuartzCore.framework in Frameworks */,
-				0B9BC3751A188E2B00A6AB38 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,9 +102,6 @@
 		0BAEE1E119F7F40A00D6DB7F /* SMCWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				0B66AD181A36F24D009E40D7 /* smc.h */,
-				0B66AD191A36F24D009E40D7 /* SMCWrapper.h */,
-				0B66AD1A1A36F24D009E40D7 /* SMCWrapper.m */,
 				0BAEE1E919F7F88200D6DB7F /* SMC */,
 			);
 			name = SMCWrapper;
@@ -156,8 +149,7 @@
 		6ECF599E15384B8000250671 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B71A2571A29B04E00BB1CDC /* Security.framework */,
-				0B9BC3741A188E2B00A6AB38 /* IOKit.framework */,
+				0B83081D1AD84EF60001B4C3 /* IOKit.framework */,
 				0B20F3F819ED46E500E46A9A /* QuartzCore.framework */,
 				6ECF599F15384B8000250671 /* Cocoa.framework */,
 				6ECF59A115384B8000250671 /* Other Frameworks */,
@@ -267,7 +259,7 @@
 			files = (
 				0BBAD1041A07E3BC00AB1FC2 /* SMCSupport.m in Sources */,
 				6ECF59AC15384B8000250671 /* main.m in Sources */,
-				0BAEE1E619F7F6F800D6DB7F /* smc.m in Sources */,
+				0B83081B1AD84E6C0001B4C3 /* smc.m in Sources */,
 				6ECF59B315384B8000250671 /* AppDelegate.mm in Sources */,
 				0B20F3FE19ED4DC400E46A9A /* DCOAboutWindowController.m in Sources */,
 			);

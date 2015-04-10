@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DCOAboutWindow/DCOAboutWindowController.h"
-#import "smc.h"
+//#import "smc.h"
 #import "SMCSupport.h"
 //#import "SMCWrapper.h"
 

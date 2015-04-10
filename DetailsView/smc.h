@@ -23,7 +23,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 #include <sys/cdefs.h>
-#include <Availability.h>
+//#include <Availability.h>
 
 #ifndef __SMC_H__
 #define __SMC_H__

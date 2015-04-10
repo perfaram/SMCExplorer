@@ -29,7 +29,7 @@
 #include <IOKit/IOKitLib.h>
 #include <mach/machine.h>
 #include <libkern/OSAtomic.h>
-#include <cocoa/cocoa.h>
+#import <Foundation/Foundation.h>
 
 #include "smc.h"
 //#define STRIP_COMPATIBILIY
