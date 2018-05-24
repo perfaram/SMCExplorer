@@ -19,8 +19,12 @@
 - (IBAction)showAboutWindow:(id)sender;
 @property BOOL didFinishLaunching;
 
+@property IBOutlet NSMenuItem* saveItem;
+- (IBAction)saveItemClicked:(id)sender;
+
 @property NSDictionary *smcDict;
 @property NSDictionary *smcDictTypes;
+@property NSDictionary *smcRawDict;
 //@property NSMutableArray *smcKeys;
 //@property NSMutableArray *smcValues;
 @property NSMutableArray *tableContent;

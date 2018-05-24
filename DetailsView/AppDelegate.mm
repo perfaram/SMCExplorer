@@ -38,9 +38,11 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
 	NSMutableDictionary* valDict;
 	NSMutableDictionary* typeDict;
-	[[SMCWrapper sharedWrapper] dumpToValueDict:&valDict andTypeDict:&typeDict];
+    NSMutableDictionary* rawDict;
+	[[SMCWrapper sharedWrapper] dumpToValueDict:&valDict andTypeDict:&typeDict andRawDict:&rawDict];
     self.smcDict = valDict;
 	self.smcDictTypes = typeDict;
+    self.smcRawDict = rawDict;
     [_smcDict enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL* stop) {
         NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:key, @"Key", value, @"Value", [_smcDictTypes valueForKey:key], @"Type", [[SMCSupport alloc] keyProperty:KEY_DESC forKey:key], @"Description", nil];
         [_tableContent addObject:dictionary];
@@ -87,6 +89,21 @@
     // Show the about window
     [self.aboutWindowController showWindow:nil];
     
+}
+
+-(void)saveItemClicked:(id)sender {
+    NSMutableDictionary<NSString*, NSDictionary*>* plistDict = [NSMutableDictionary.alloc initWithCapacity:self.smcDict.count];
+    
+    for (NSString* key in self.smcDict.allKeys) {
+        NSDictionary* describingValue = @{@"type": [_smcDictTypes valueForKey:key],
+                                          @"value": [_smcDict valueForKey:key],
+                                          @"raw": [_smcRawDict valueForKey:key]
+                                          };
+        [plistDict setObject:describingValue forKey:key];
+    }
+    
+    NSString *filePath = [@"~/Downloads/SMCDump.plist" stringByExpandingTildeInPath];
+    [plistDict writeToFile:filePath atomically:YES];
 }
 
 @end

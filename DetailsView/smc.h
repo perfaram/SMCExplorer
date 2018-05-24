@@ -156,7 +156,7 @@ __deprecated_msg("Use stringRepresentationForBytes:withSize:ofType:inBuffer: ins
 	   asString:(NSString **)str
 __deprecated_msg("Use readKey:intoString: instead.");
 #endif
--(BOOL) dumpToValueDict:(NSMutableDictionary**)valDict andTypeDict:(NSMutableDictionary**)typeDict;
+-(BOOL) dumpToValueDict:(NSMutableDictionary**)valDict andTypeDict:(NSMutableDictionary**)typeDict andRawDict:(NSMutableDictionary**)rawDict;
 -(SMCVal_t) createEmptyValue;
 -(BOOL) readKey:(NSString *)key intoVal:(SMCVal_t *)val;
 -(BOOL) readKey:(NSString *)key intoString:(NSString **)str;

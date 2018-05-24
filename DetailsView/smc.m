@@ -374,7 +374,6 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 	else {
 		int i;
 		char tempAb[64];
-		if (dataSize >= 32) return FALSE;
 		for (i = 0; i < dataSize; i++) {
 			snprintf(tempAb+strlen(tempAb), 8, "%02x ", (unsigned char) bytes[i]);
 		}
@@ -394,6 +393,7 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 							  ofType: (UInt32Char_t)dataType
 						  toNSString: (NSString**)abri
 {
+    NSLog(@"%s", dataType);
 	if (dataSize > 0) {
 		if ((strcmp(dataType, DATATYPE_UINT8) == 0) ||
 			(strcmp(dataType, DATATYPE_UINT16) == 0) ||
@@ -450,9 +450,9 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 			*abri = [[NSString alloc] initWithFormat:@"%s", bytes[0] ? "TRUE" : "FALSE"];
 		else {
 			int i;
-			char tempAb[64];
-			if (dataSize >= 32) return @"";
-			for (i = 0; i < dataSize; i++) {
+            char tempAb[68] = {0};
+            if (dataSize >= 32) return @"";
+			for (i = 0; i < (int)dataSize; i++) {
 				snprintf(tempAb+strlen(tempAb), 8, "%02x ", (unsigned char) bytes[i]);
 			}
 			*abri = [[NSString alloc] initWithFormat:@"%s", tempAb];
@@ -545,7 +545,7 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 	return YES;
 }
 
--(BOOL) dumpToValueDict:(NSMutableDictionary**)valDict andTypeDict:(NSMutableDictionary**)typeDict {
+-(BOOL) dumpToValueDict:(NSMutableDictionary**)valDict andTypeDict:(NSMutableDictionary**)typeDict andRawDict:(NSMutableDictionary**)rawDict {
 	kern_return_t result;
 	SMCKeyData_t  inputStructure;
 	SMCKeyData_t  outputStructure;
@@ -555,9 +555,11 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 	SMCVal_t      val;
 	NSString* stringKey;
 	NSString* valueKey;
+    NSData* rawVal;
 	NSString* typeKey;
 	*valDict=[[NSMutableDictionary alloc] init];
 	*typeDict=[[NSMutableDictionary alloc] init];
+    *rawDict=[[NSMutableDictionary alloc] init];
 	totalKeys = [self _smcIndexCount];
 	for (i = 0; i < totalKeys; i++) {
 		//zeroing out structures
@@ -578,10 +580,12 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 		result = [self _smcReadKey:key toValue:&val]; //reads key (by its name, see above)
 		stringKey = [NSString stringWithFormat:@"%s" , key];
 		[self stringRepresentationOfVal:val toNSString:&valueKey];
+        rawVal = [NSData.alloc initWithBytes:val.bytes length:val.dataSize];
 
 		typeKey = [NSString stringWithFormat:@"%-4s",val.dataType];
 		[*valDict setObject:valueKey forKey:stringKey];
 		[*typeDict setObject:typeKey forKey:stringKey];
+        [*rawDict setObject:rawVal forKey:stringKey];
 	}
 	return TRUE;
 }
