@@ -374,6 +374,7 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 	else {
 		int i;
 		char tempAb[64];
+		if (dataSize >= 32) return FALSE;
 		for (i = 0; i < dataSize; i++) {
 			snprintf(tempAb+strlen(tempAb), 8, "%02x ", (unsigned char) bytes[i]);
 		}
@@ -450,6 +451,7 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 		else {
 			int i;
 			char tempAb[64];
+			if (dataSize >= 32) return @"";
 			for (i = 0; i < dataSize; i++) {
 				snprintf(tempAb+strlen(tempAb), 8, "%02x ", (unsigned char) bytes[i]);
 			}
