@@ -1,0 +1,76 @@
+{
+  "author" : "Iconizer",
+  "version" : "1.0",
+  "images" : [
+    {
+      "size" : "128x128",
+      "filename" : "mac_appicon-128@1x.png",
+      "expected-size" : "128",
+      "idiom" : "mac",
+      "scale" : "1x"
+    },
+    {
+      "size" : "256x256",
+      "filename" : "mac_appicon-256@1x.png",
+      "expected-size" : "256",
+      "idiom" : "mac",
+      "scale" : "1x"
+    },
+    {
+      "size" : "128x128",
+      "filename" : "mac_appicon-128@2x.png",
+      "expected-size" : "256",
+      "idiom" : "mac",
+      "scale" : "2x"
+    },
+    {
+      "size" : "256x256",
+      "filename" : "mac_appicon-256@2x.png",
+      "expected-size" : "512",
+      "idiom" : "mac",
+      "scale" : "2x"
+    },
+    {
+      "size" : "32x32",
+      "filename" : "mac_appicon-32@1x.png",
+      "expected-size" : "32",
+      "idiom" : "mac",
+      "scale" : "1x"
+    },
+    {
+      "size" : "512x512",
+      "filename" : "mac_appicon-512@1x.png",
+      "expected-size" : "512",
+      "idiom" : "mac",
+      "scale" : "1x"
+    },
+    {
+      "size" : "16x16",
+      "filename" : "mac_appicon-16@1x.png",
+      "expected-size" : "16",
+      "idiom" : "mac",
+      "scale" : "1x"
+    },
+    {
+      "size" : "16x16",
+      "filename" : "mac_appicon-16@2x.png",
+      "expected-size" : "32",
+      "idiom" : "mac",
+      "scale" : "2x"
+    },
+    {
+      "size" : "32x32",
+      "filename" : "mac_appicon-32@2x.png",
+      "expected-size" : "64",
+      "idiom" : "mac",
+      "scale" : "2x"
+    },
+    {
+      "size" : "512x512",
+      "filename" : "mac_appicon-512@2x.png",
+      "expected-size" : "1024",
+      "idiom" : "mac",
+      "scale" : "2x"
+    }
+  ]
+}
