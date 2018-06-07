@@ -89,8 +89,32 @@
     
 }
 
+-(NSString*) platformModel {
+    kern_return_t result;
+    mach_port_t masterPort;
+    io_registry_entry_t pexEntry;
+    
+    result = IOMasterPort(bootstrap_port, &masterPort);
+    if (result != kIOReturnSuccess)
+        return @"Unreadable";
+    
+    pexEntry = IOServiceGetMatchingService(masterPort, IOServiceMatching("IOPlatformExpertDevice"));
+    if (pexEntry == 0) {
+        return @"Unreadable";
+    }
+    CFMutableDictionaryRef pexProps = NULL;
+    result = IORegistryEntryCreateCFProperties(pexEntry, &pexProps, NULL, 0);
+    
+    NSDictionary* platformExpertRawDict = (__bridge_transfer NSDictionary*)pexProps;
+    //handle results
+    NSString* systemInfoString = [[NSString alloc] initWithData:[platformExpertRawDict objectForKey:@"model"]
+                                                       encoding:NSUTF8StringEncoding];
+    
+    return systemInfoString;
+}
+
 -(void)saveItemClicked:(id)sender {
-    NSMutableDictionary<NSString*, NSDictionary*>* plistDict = [NSMutableDictionary.alloc initWithCapacity:self.smcDict.count];
+    NSMutableDictionary* plistDict = [NSMutableDictionary.alloc initWithCapacity:self.smcDict.count];
     
     for (NSString* key in self.smcDict.allKeys) {
         NSDictionary* describingValue = @{@"type": [_smcDictTypes valueForKey:key],
@@ -99,6 +123,8 @@
                                           };
         [plistDict setObject:describingValue forKey:key];
     }
+    
+    [plistDict setObject:[self platformModel] forKey:@"MODEL"];
     
     NSString *filePath = [@"~/Downloads/SMCDump.plist" stringByExpandingTildeInPath];
     [plistDict writeToFile:filePath atomically:YES];
