@@ -393,7 +393,7 @@ __deprecated_msg("Use _smcCall:forKeyData: toKeyData: instead.");
 							  ofType: (UInt32Char_t)dataType
 						  toNSString: (NSString**)abri
 {
-    NSLog(@"%s", dataType);
+    //NSLog(@"%s", dataType);
 	if (dataSize > 0) {
 		if ((strcmp(dataType, DATATYPE_UINT8) == 0) ||
 			(strcmp(dataType, DATATYPE_UINT16) == 0) ||

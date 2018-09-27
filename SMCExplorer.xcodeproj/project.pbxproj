@@ -209,6 +209,12 @@
 				CLASSPREFIX = SMX;
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = deicoon;
+				TargetAttributes = {
+					6ECF599A15384B8000250671 = {
+						DevelopmentTeam = 8VNN3M6MR6;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 6ECF599515384B7F00250671 /* Build configuration list for PBXProject "SMCExplorer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -338,7 +344,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNN3M6MR6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"/**",
 					"$(inherited)",
@@ -354,6 +363,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.deicoon.SMCExplorer;
 				PRODUCT_NAME = SMCExplorer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -363,7 +374,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNN3M6MR6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"/**",
 					"$(inherited)",
@@ -379,6 +393,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.deicoon.SMCExplorer;
 				PRODUCT_NAME = SMCExplorer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
